@@ -1,8 +1,9 @@
-import { TextGenerateEffect } from "@/ui/TextGenerateEffect";
+import WavyText from "@/components/magicui/wavy-text";
 
 export default async function Home() {
   return (
     <div className="relative isolate px-6 pt-14 lg:px-8">
+
         <div
           className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
           aria-hidden="true"
@@ -17,19 +18,19 @@ export default async function Home() {
         </div>
         <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
           <div className="hidden sm:mb-8 sm:flex sm:justify-center">
-            <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
-              Announcing our next round of funding.{' '}
-              <a href="#" className="font-semibold text-indigo-600">
+          <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 bg-gray-200/10 ring-green-900/10 hover:ring-gray-900/20">
+          Solicite um Orçamento.{' '}
+              <a href="https://api.whatsapp.com/send?phone=5561986692775" className="font-semibold text-[#ffffff] backdrop-grayscale bg-gradient-to-r from-bodyColor to-[#66a900]/90 rounded-full px-3 py-1">
                 <span className="absolute inset-0" aria-hidden="true" />
-                Read more <span aria-hidden="true">&rarr;</span>
+                Whatsapp <span aria-hidden="true">&rarr;</span>
               </a>
             </div>
           </div>
           <div className="text-center">
-          <TextGenerateEffect
-            words="Elevando o estilo e a Qualidade"
-            className="text-left text-[48rem] md:text-7xl lg:text-7xl mb-4"
-          />
+          <WavyText
+      word="Wavy Text"
+      className="text-4xl font-bold text-black dark:text-slate-900"
+    />
             <p className="mt-6 text-lg leading-8 text-gray-600">
               Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet
               fugiat veniam occaecat fugiat aliqua.
