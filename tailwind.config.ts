@@ -1,6 +1,5 @@
 import type { Config } from "tailwindcss";
 const colors = require("tailwindcss/colors");
-const plugin = require('tailwindcss/plugin')
 
 const config: Config = {
   content: [
@@ -220,21 +219,6 @@ const config: Config = {
     pattern:
       /(fill-(?:slate|gray|zinc|neutral|stone|red|orange|amber|yellow|lime|green|emerald|teal|cyan|sky|blue|indigo|violet|purple|fuchsia|pink|rose)-(?:50|100|200|300|400|500|600|700|800|900|950))/,
   }],
-  plugins: [
-    plugin(({ matchUtilities }) => {
-      matchUtilities({
-        multi: (value) => {
-          const escape = (str) => {
-            return str.replace(/_/g, '\\_').replace(/ /g, '_')
-          }
-          const utilities = value.split(';').map(escape).join(' ')
-          console.log({ value, utilities })
-          return {
-            [`@apply ${utilities}`]: {},
-          }
-        },
-      })
-    }),
-  ],
+  plugins: [],
 };
 export default config;
